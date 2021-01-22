@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example1 Edgar Ocampo</title>
+</head>
+<body>
+    <h1>Dada una cadena, averigua si sus caracteres se pueden reorganizar para
+        formar un palíndromo
+        </h1>
+        <h1>
+            
+        </h1>
+        <script>
+            function palindromo() {
+                    var texto;
+                    var alReves;
+
+                    texto = getCadenaSinAcentos(prompt("Introduce texto o palabra: ").replace(/\s/g, '').toLowerCase());
+                    alReves = cambiar(texto);
+
+                        if (texto == alReves) {
+                            document.write("Palindromo");
+                        } else {
+                            document.write("No palindromo");
+                        }
+                    }
+
+                    function cambiar(texto) {
+                    return texto.split("").reverse().join("");
+                    }
+
+                    function getCadenaSinAcentos(cadena) {
+                    // Quitamos acentos.
+                        cadena = cadena.replace(/á/gi, "a");
+                        cadena = cadena.replace(/é/gi, "e");
+                        cadena = cadena.replace(/í/gi, "i");
+                        cadena = cadena.replace(/ó/gi, "o");
+                        cadena = cadena.replace(/ú/gi, "u");
+                        return cadena;
+                    }
+
+
+palindromo();
+            </script>
+</body>
+</html>
