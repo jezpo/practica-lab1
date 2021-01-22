@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example1 Edgar Ocampo</title>
+</head>
+<body>
+    <h1>Dada una matriz de cadenas, devuelve otra matriz que contiene todas sus
+        cadenas más largas.
+        </h1>
+        <h1>
+            
+        </h1>
+    <script>
+        function foundword(str){
+            let words = str.split(" ");
+            let maxSize = Math.max(...words.map(word =>word.length));
+            return words.filter(word => word.length === maxSize);
+        }
+
+        document.write(foundword("aba aa ab vcd aba"))
+    </script>
+</body>
+</html>
